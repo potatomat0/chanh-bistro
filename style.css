@@ -9,3 +9,8 @@
   body {
     font-family: 'Chanh', sans-serif;
   }
+
+#img1 {
+  filter: brightness(50%);
+  backdrop-filter: blur(2px);
+}
