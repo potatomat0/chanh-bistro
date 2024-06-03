@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Chanh';
+    src: url('./chanh.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Usage example */
+  body {
+    font-family: 'Chanh', sans-serif;
+  }
+
+#img1 {
+  filter: brightness(50%);
+  backdrop-filter: blur(2px);
+}
+
+#image {
+  /* tim cach lam background toi hon */
+  height: 600px;
+  background-image: url('./img/img1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#innerText {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  #logo {
+    display: none;
+  }
+}
+
+/* typewriter effect */
+
+/* DEMO-SPECIFIC STYLES */
+/* .typewriter {
+  color: white;
+  font-family: monospace;
+  overflow: hidden; 
+  border-right: .15em solid orange; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 3.5s  steps(40, end) infinite,
+    blink-caret .5s step-end infinite;
+} */
+
+/* The typing effect 1 */
+/* @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+ */
+
+

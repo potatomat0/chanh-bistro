@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chanh Bistro</title>
     <link rel="icon" type="image/x-icon" size="57" href="./logo.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styling/style.css">
+    <link rel="stylesheet" href="styling/scrolling_animation.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -13,13 +14,13 @@
 
 
     <!-- HEADER -->
-<div class="w-full px-2">
+<div class="w-full px-3">
     
     <!-- navbar -->
     <nav class="border-gray-200">
-    <div class=" container flex flex-wrap items-center align-middle justify-between">
+    <div class="flex flex-wrap items-center align-middle justify-between">
    
-        <a  target="_blank" class="md:hidden" href="/">
+        <a  target="_blank" class="md:hidden sm:visible" href="/">
             <img src="./logo.png" width="120" alt="Chanh Bistro logo">
         </a>
         <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
@@ -31,11 +32,11 @@
         <!-- ĐÂY LÀ NƠI CHỨA CÁC LINK CỦA NAVBAR -->
 
         <div class="hidden md:block w-full"  id="mobile-menu">
-        <ul class="w-full p-10 flex-col md:flex-row flex justify-between md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+        <ul class="w-full p-5 flex-col md:flex-row flex justify-between md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <!-- location -->            
             <li>
                 <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-amber-700 md:p-0 font-medium flex items-center justify-between w-full hover:underline">What's Hot &#8964; </button>
-                <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my -4 w-44">
                     <ul class="py-1" aria-labelledby="dropdownLargeButton">
                     <li>
                         <a   target="_blank" href="https://www.facebook.com/chanhbistro/photos/p.3442040619384746/3442040619384746" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Brunch</a>
@@ -69,10 +70,9 @@
             </li>
 
             <!-- chanh bistro logo -->
-            <li class="inline-flex mx-10">
-                <!-- <a>Chanh Bistro</a> -->
+            <li class="mx-10">
                 <a  target="_blank" href="/">
-                    <img src="./logo.png" width="120" alt="Chanh Bistro logo">
+                    <img id="logo" src="./logo.png" width="120" alt="Chanh Bistro logo">
                 </a>                
             </li>
 
@@ -81,16 +81,16 @@
 
             
 
-            <button type="button" data-modal-target="crypto-modal" data-modal-toggle="crypto-modal" class="text-gray-900 bg-amber-700 hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5  inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">
+            <button type="button" data-modal-target="crypto-modal" data-modal-toggle="crypto-modal" class="text-gray-900 bg-amber-700 hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5  inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">
                 <svg aria-hidden="true" class="w-4 h-4 me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-                Connect wallet
+                Connect Us
                 </button>
     
             <!-- Main modal -->
             <div id="crypto-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                 <div class="relative p-4 w-full max-w-md max-h-full">
                     <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <div class="bg-white rounded-lg shadow dark:bg-gray-700">
                         <!-- Modal header -->
                         <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                             <h3 class="hover:text-amber-700 text-lg font-semibold text-gray-900 dark:text-white">
@@ -105,12 +105,12 @@
                         </div>
                         <!-- Modal body -->
                         <div class="p-4 md:p-5">
-                            <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Connect with us with these following options.</p>
-                            <ul class="my-4 space-y-3">
+                            <p class="text-sm font-normal mb-5 whitespace-nowrap text-gray-500 dark:text-gray-400">Connect with us with these following options.</p>
+                            <ul class="space-y-3">
                                 
                                 <!-- mail -->
                                 <li>
-                                    <a target="_blank" href="chanhbistro.rooftopsaigon@gmail.com" class="flex items-center p-3 text-base font-bold text-sm text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                                    <a target="_blank" href="chanhbistro.rooftopsaigon@gmail.com" class="flex-wrap flex items-center p-3 text-base font-bold text-sm text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
                                         <i class="flex-2 hover:text-amber-700 fa-regular fa-envelope"></i>
                                         <span class="flex-1 ms-3">chanhbistro.rooftopsaigon@gmail.com</span>
                                     </a>
@@ -158,15 +158,35 @@
 <!-- content -->
 
 <section>
+    <!-- hinh anh -->
+    <div id="image" class="">
+        <!-- <img id="img1" src="./img/img1.png" width="100%" alt="Chanh's evening view"> -->
+        <!-- <div id="innerText">
+            <h1 class="typewriter w-1/3 mb-4 text-3xl">Welcome to Chanh Bistro</h1> 
+            <p class=" border-gray-600 text-lg mx-auto  w-1/2 text-white">The boutique <u class="hover:text-amber-200">rooftop bistro</u> in the heart of Saigon. Affordable western international cuisine.</p>
+        </div> -->
+        <h1 id="innerText" class="w-1/3 mb-4 text-3xl text-white">
+            <p class="inline-flex mx-auto">Welcome to Chanh</p> 
+            <p class="mx-auto">We serve</p> 
+            <a href="" class="mx-auto inline-flex typewrite" data-period="2000" data-type='[ "Breads and Sourdough", "Wine and Beaverage", "Gourmet Dishes", "Everything you ever wanted"]'>
+              <span class="wrap"></span>
+            </a>
+          </h1>
+    </div>
 
-<div id="image">
+    <!-- end hinh anh -->
 
-    <img id="img1" src="./img/img1.png" width="100%" alt="Chanh's evening view">
+    <!-- gioi thieu cac mon -->
 
-</div>
 
+
+    <!-- end gioi thieu cac mon -->
 </section>
-<!-- end section -->
+
+<!-- end content -->
+
+
+<script src="script.js"></script>
 <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
 </body>
 </html>
