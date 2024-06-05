@@ -66,3 +66,80 @@ body {
   50% { border-color: orange }
 }
  */
+
+.custom-pattern {
+  background-image: radial-gradient(
+      rgba(255, 166, 0, 0.372) 2px,
+      transparent 2px
+    ),
+    radial-gradient(rgba(255, 166, 0, 0.372) 2px, transparent 2px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  background-color: #e4e4ed00;
+}
+
+.custom-pattern2 {
+  background: radial-gradient(
+        35.36% 35.36% at 100% 25%,
+        #0000 66%,
+        rgba(255, 166, 0, 0.372) 68% 70%,
+        #0000 72%
+      )
+      32px 32px / calc(2 * 32px) calc(2 * 32px),
+    radial-gradient(
+        35.36% 35.36% at 0 75%,
+        #0000 66%,
+        rgba(255, 166, 0, 0.372) 68% 70%,
+        #0000 72%
+      )
+      32px 32px / calc(2 * 32px) calc(2 * 32px),
+    radial-gradient(
+        35.36% 35.36% at 100% 25%,
+        #0000 66%,
+        rgba(255, 166, 0, 0.372) 68% 70%,
+        #0000 72%
+      )
+      0 0 / calc(2 * 32px) calc(2 * 32px),
+    radial-gradient(
+        35.36% 35.36% at 0 75%,
+        #0000 66%,
+        rgba(255, 166, 0, 0.372) 68% 70%,
+        #0000 72%
+      )
+      0 0 / calc(2 * 32px) calc(2 * 32px),
+    repeating-conic-gradient(#e4e4ed00 0 25%, #0000 0 50%) 0 0 / calc(2 * 32px)
+      calc(2 * 32px),
+    radial-gradient(#0000 66%, rgba(255, 166, 0, 0.372) 68% 70%, #0000 72%) 0
+      calc(32px / 2) / 32px 32px #e4e4ed00;
+}
+
+.custom-pattern3 {
+  background: radial-gradient(
+        circle,
+        transparent 20%,
+        #e4e4ed00 20%,
+        #e4e4ed00 80%,
+        transparent 80%,
+        transparent
+      )
+      0% 0% / 64px 64px,
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #e4e4ed00 20%,
+        #e4e4ed00 80%,
+        transparent 80%,
+        transparent
+      )
+      32px 32px / 64px 64px,
+    linear-gradient(rgba(255, 166, 0, 0.372) 2px, transparent 2px) 0px -1px / 32px
+      32px,
+    linear-gradient(90deg, rgba(255, 166, 0, 0.372) 2px, #e4e4ed00 2px) -1px 0px /
+      32px 32px #e4e4ed00;
+  background-size: 64px 64px, 64px 64px, 32px 32px, 32px 32px;
+  background-color: #e4e4ed00;
+}
+
+#map {
+  height: 350px;
+}
