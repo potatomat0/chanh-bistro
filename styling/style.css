@@ -1,24 +1,24 @@
 @font-face {
-    font-family: 'Chanh';
-    src: url('./chanh.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  /* Usage example */
-  body {
-    font-family: 'Chanh', sans-serif;
-  }
+  font-family: "Chanh";
+  src: url("../chanh.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Usage example */
+body {
+  font-family: "Chanh", sans-serif;
+}
 
 #img1 {
-  filter: brightness(50%);
+  filter: brightness(75%);
   backdrop-filter: blur(2px);
 }
 
 #image {
   /* tim cach lam background toi hon */
   height: 600px;
-  background-image: url('./img/img1.png');
+  background-image: url("../img/img1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -26,11 +26,7 @@
 
 #innerText {
   position: absolute;
-  display: inline-block;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* top: 70%; */
 }
 
 #logo {
@@ -70,5 +66,3 @@
   50% { border-color: orange }
 }
  */
-
-
