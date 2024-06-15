@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+/* custom cursor */
+
+html {
+  cursor: url("../img/cursor.png"), auto;
+}
+
 @font-face {
   font-family: "Chanh";
   src: url("../chanh.woff2") format("woff2");
@@ -37,35 +47,50 @@ body {
   #logo {
     display: none;
   }
+
+  #image {
+    height: 300px;
+  }
+
+  #productImage {
+    height: 150px;
+  }
+
+  #button {
+    margin: 30px;
+  }
 }
 
-/* typewriter effect */
-
-/* DEMO-SPECIFIC STYLES */
-/* .typewriter {
+.typewriter {
   color: white;
   font-family: monospace;
-  overflow: hidden; 
-  border-right: .15em solid orange; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .15em; 
-  animation: 
-    typing 3.5s  steps(40, end) infinite,
-    blink-caret .5s step-end infinite;
-} */
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end) infinite,
+    blink-caret 0.5s step-end infinite;
+}
 
-/* The typing effect 1 */
-/* @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
- */
 
 .custom-pattern {
   background-image: radial-gradient(
@@ -114,32 +139,53 @@ body {
 }
 
 .custom-pattern3 {
-  background: radial-gradient(
-        circle,
-        transparent 20%,
-        #e4e4ed00 20%,
-        #e4e4ed00 80%,
-        transparent 80%,
-        transparent
-      )
-      0% 0% / 64px 64px,
-    radial-gradient(
-        circle,
-        transparent 20%,
-        #e4e4ed00 20%,
-        #e4e4ed00 80%,
-        transparent 80%,
-        transparent
-      )
-      32px 32px / 64px 64px,
-    linear-gradient(rgba(255, 166, 0, 0.372) 2px, transparent 2px) 0px -1px / 32px
-      32px,
-    linear-gradient(90deg, rgba(255, 166, 0, 0.372) 2px, #e4e4ed00 2px) -1px 0px /
-      32px 32px #e4e4ed00;
-  background-size: 64px 64px, 64px 64px, 32px 32px, 32px 32px;
-  background-color: #e4e4ed00;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #ffffff73,
+    rgba(255, 166, 0, 0.05) 6em,
+    #ffffff73 6em
+  );
 }
 
 #map {
+  z-index: -9999;
   height: 350px;
+}
+
+/* Styles for the back to top button */
+
+#button {
+  display: inline-block;
+  background-color: #ff9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
 }
